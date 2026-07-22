@@ -7,8 +7,8 @@ export default function Home() {
         <h1 className="font-serif text-4xl text-[#4a3728]">Cartas de Amor</h1>
         <p className="text-lg text-[#6b5645]">
           Antes de que todo se redujera a un WhatsApp, escribíamos cartas.
-          Recupera ese ritual: escribe tu historia de amor y envíasela a
-          alguien por email.
+          Recupera ese ritual: escribe tu historia de amor y comparte el
+          link con quien quieras.
         </p>
         <div className="mt-4 flex gap-4">
           <Link
