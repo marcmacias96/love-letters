@@ -17,7 +17,7 @@ export default async function DashboardPage() {
 
   const { data: letters } = await supabase
     .from("letters")
-    .select("id, slug, title, recipient_name, recipient_email, status, created_at")
+    .select("id, slug, title, recipient_name, status, created_at")
     .eq("author_id", user?.id ?? "")
     .order("created_at", { ascending: false });
 
@@ -61,11 +61,8 @@ export default async function DashboardPage() {
                     {letter.title || "Sin título"}
                   </p>
                   <p className="text-sm text-[#6b5645]">
-                    Para{" "}
-                    {letter.recipient_name ||
-                      letter.recipient_email ||
-                      "alguien especial"}{" "}
-                    · {STATUS_LABEL[letter.status] ?? letter.status}
+                    Para {letter.recipient_name || "alguien especial"} ·{" "}
+                    {STATUS_LABEL[letter.status] ?? letter.status}
                   </p>
                 </div>
                 <div className="flex items-center gap-4">

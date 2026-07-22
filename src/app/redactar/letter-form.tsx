@@ -58,31 +58,16 @@ export function LetterForm() {
 
   return (
     <form action={action} className="flex w-full max-w-xl flex-col gap-4">
-      <div className="grid gap-4 sm:grid-cols-2">
-        <div className="flex flex-col gap-1">
-          <label htmlFor="recipientName" className="text-sm text-[#6b5645]">
-            Nombre del destinatario
-          </label>
-          <input
-            id="recipientName"
-            name="recipientName"
-            type="text"
-            className="rounded-lg border border-[#e2d4c0] bg-white px-4 py-2 text-[#4a3728] outline-none focus:border-[#b3492f]"
-          />
-        </div>
-
-        <div className="flex flex-col gap-1">
-          <label htmlFor="recipientEmail" className="text-sm text-[#6b5645]">
-            Email del destinatario (opcional)
-          </label>
-          <input
-            id="recipientEmail"
-            name="recipientEmail"
-            type="email"
-            placeholder="Déjalo vacío para solo compartir el link"
-            className="rounded-lg border border-[#e2d4c0] bg-white px-4 py-2 text-[#4a3728] outline-none focus:border-[#b3492f]"
-          />
-        </div>
+      <div className="flex flex-col gap-1">
+        <label htmlFor="recipientName" className="text-sm text-[#6b5645]">
+          Nombre del destinatario (opcional)
+        </label>
+        <input
+          id="recipientName"
+          name="recipientName"
+          type="text"
+          className="rounded-lg border border-[#e2d4c0] bg-white px-4 py-2 text-[#4a3728] outline-none focus:border-[#b3492f]"
+        />
       </div>
 
       <div className="flex flex-col gap-1">
